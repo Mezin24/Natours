@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Mezin24/Natours#readme",
   "devDependencies": {
     "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "emmet": "^2.3.4"
   }
 }

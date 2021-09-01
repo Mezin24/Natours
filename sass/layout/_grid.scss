@@ -1,0 +1,35 @@
+.container {
+  margin: 0 auto;
+  max-width: $grid-with;
+  padding: 3rem;
+
+  div div {
+    background-color: red;
+    color: #fff;
+    padding: 1rem;
+  }
+}
+.grid {
+  display: grid;
+  column-gap: $gutter-horizontal;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.item-col-2 {
+  grid-column: span 2;
+}
+.item-col-3 {
+  grid-column: span 3;
+}
