@@ -34,7 +34,7 @@
       outline: 1.5rem solid $color-primary;
     }
   }
-  &:hover i&__photo:not(:hover) {
+  &:hover &__photo:not(:hover) {
     transform: scale(0.9);
   }
 }
