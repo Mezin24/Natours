@@ -3,7 +3,16 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-secondary: #fd7e14;
+$color-secondary-light: #fcc419;
+$color-secondary-dark: #f76707;
+
+$color-tertiary: #4c6ef5;
+$color-tertiary-light: #91a7ff;
+$color-tertiary-dark: #4263eb;
+
 $color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
 $color-white: #fff;
@@ -16,3 +25,6 @@ $default-font-size: 1.6rem;
 $grid-with: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6.4rem;
+
+// BOX SHADOW COLOR
+$box-shadow-1: rgba(0, 0, 0, 0.15);
