@@ -1,0 +1,82 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
+  &__input {
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.8rem;
+    background-color: rgba($color-white, 0.7);
+    border: none;
+    display: block;
+    width: 90%;
+    padding: 1.5rem 2rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary;
+      box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+    }
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+    // REMEMBER to change input text color
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+  }
+  &__label {
+    display: block;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.6rem;
+    transition: all 0.4s;
+  }
+
+  //REMEMBER we can choose an adjecent selector using + or using ~ if it goes later
+  // it works when we don't fill in the form
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2em);
+  }
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+  &__radio-input {
+    display: none;
+  }
+  &__radio-label {
+    cursor: pointer;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__radio-button {
+    width: 2.6rem;
+    height: 2.6rem;
+    border: 4px solid $color-primary;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $color-primary;
+      border-radius: 50%;
+      transition: opacity 0.2s;
+      opacity: 0;
+    }
+  }
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+}
